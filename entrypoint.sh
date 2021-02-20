@@ -8,8 +8,8 @@ for v in `env`; do
   if [[ $PREFIX == 'GITHUB' ]] || [[ $PREFIX == 'INPUT' ]]; then
     echo "$v";
   fi
-
-  echo "---"
-  echo "Event:"
-  jq $INPUT_JQ_SELECTOR $GITHUB_EVENT_PATH
 done
+
+echo "---"
+echo "Event:"
+jq $INPUT_JQ_SELECTOR $GITHUB_EVENT_PATH
