@@ -11,5 +11,5 @@ for v in `env`; do
 
   echo "---"
   echo "Event:"
-  jq . $INPUT_JQ_SELECTOR $GITHUB_EVENT_PATH
+  jq $INPUT_JQ_SELECTOR $GITHUB_EVENT_PATH
 done
